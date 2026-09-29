@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Coffeelo — An Elevated Luxury Coffee Experience. Single-origin artisanal coffee roasted in Parbhani with full ambient video background." />
+  <title>Coffeelo — Luxury Artisanal Coffee Experience</title>
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: '#140A06',
+            'espresso-dark': '#0E0603',
+            cocoa: '#23120A',
+            gold: '#E8B34E',
+            'gold-light': '#F5D77F',
+            'gold-dim': '#C89B3C',
+            terracotta: '#C1552E',
+            cream: '#FFF9F0',
+            'warm-text': '#D6C2B4',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            cormorant: ['Cormorant Garamond', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            script: ['Caveat', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @keyframes goldShimmerSweep {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .text-gold-shimmer {
+      background: linear-gradient(90deg, #F4D06F 0%, #FFF6E0 25%, #E8B34E 50%, #FFF0CA 75%, #C1552E 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: goldShimmerSweep 6s ease-in-out infinite;
+    }
+    .emblem-gold-glow {
+      filter: drop-shadow(0 0 12px rgba(232, 179, 78, 0.45));
+    }
+  </style>
+
+  <style>
+    @keyframes beanFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-14px) rotate(8deg); }
+    }
+    .animate-bean-float { animation: beanFloat 7s ease-in-out infinite; }
+
+    @keyframes badgeSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-badge-spin { animation: badgeSpin 14s linear infinite; }
+
+    .gold-glow {
+      box-shadow: 0 0 35px rgba(232, 179, 78, 0.22);
+    }
+    .gold-glow-lg {
+      box-shadow: 0 10px 50px rgba(232, 179, 78, 0.35);
+    }
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #FFF5E1 0%, #E8B34E 45%, #F5D77F 75%, #C1552E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .grain::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .flip-card { perspective: 1200px; }
+    .flip-inner {
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-front, .flip-back {
+      backface-visibility: hidden;
+      position: absolute;
+      inset: 0;
+    }
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+
+<body class="bg-[#140A06] text-[#FFF9F0] font-sans antialiased overflow-x-hidden selection:bg-[#E8B34E] selection:text-[#140A06]">
+
+  <!-- Top Luxury Glassmorphism Header -->
+  <header id="mainHeader" class="sticky top-0 z-50 transition-all duration-300 bg-[#140A06]/75 backdrop-blur-xl border-b border-[#E8B34E]/15">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="group inline-flex items-center gap-3 select-none transition-all duration-300">
+        <div class="relative flex h-10 w-10 items-center justify-center flex-shrink-0 transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 rounded-full bg-[#E8B34E]/25 blur-md opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative h-full w-full emblem-gold-glow">
+            <defs>
+              <linearGradient id="hdrGoldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF4D0" />
+                <stop offset="30%" stop-color="#E8B34E" />
+                <stop offset="70%" stop-color="#C89B3C" />
+                <stop offset="100%" stop-color="#F5D77F" />
+              </linearGradient>
+              <linearGradient id="hdrGoldCore" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2E1B12" />
+                <stop offset="100%" stop-color="#140A06" />
+              </linearGradient>
+              <linearGradient id="hdrBean" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF0CA" />
+                <stop offset="50%" stop-color="#E8B34E" />
+                <stop offset="100%" stop-color="#C1552E" />
+              </linearGradient>
+              <linearGradient id="hdrSteam" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#E8B34E" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="#FFF9F0" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <circle cx="24" cy="24" r="22" stroke="url(#hdrGoldRim)" stroke-width="1.2" stroke-opacity="0.75" />
+            <circle cx="24" cy="24" r="20" stroke="url(#hdrGoldRim)" stroke-width="0.8" stroke-dasharray="1.5 2.5" />
+            <circle cx="24" cy="24" r="18.5" fill="url(#hdrGoldCore)" stroke="url(#hdrGoldRim)" stroke-width="1.5" />
+            <path d="M24 6.5 L24.8 8 L24 9.5 L23.2 8 Z" fill="#FFF4D0" />
+            <path d="M24 38.5 L24.8 40 L24 41.5 L23.2 40 Z" fill="#FFF4D0" />
+            <path d="M6.5 24 L8 24.8 L9.5 24 L8 23.2 Z" fill="#FFF4D0" />
+            <path d="M38.5 24 L40 24.8 L41.5 24 L40 23.2 Z" fill="#FFF4D0" />
+            <g transform="translate(24, 25) scale(0.72) translate(-24, -24)">
+              <path d="M24 14 C17.5 14 14 18.5 14 24 C14 29.5 17.5 34 24 34 C24 34 21.5 28.5 24 24 C26.5 19.5 24 14 24 14 Z" fill="url(#hdrBean)" />
+              <path d="M24 14 C30.5 14 34 18.5 34 24 C34 29.5 30.5 34 24 34 C24 34 26.5 28.5 24 24 C21.5 19.5 24 14 24 14 Z" fill="url(#hdrBean)" />
+              <path d="M24 14 C21.5 19.5 26.5 28.5 24 34" stroke="#FFF9F0" stroke-width="1.2" stroke-linecap="round" />
+            </g>
+            <path d="M21 16.5 C20 14.5 22 13 21 11" stroke="url(#hdrSteam)" stroke-width="1.2" stroke-linecap="round" />
+            <path d="M27 16.5 C28 14.5 26 13 27 11" stroke="url(#hdrSteam)" stroke-width="1.2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-cinzel text-2xl font-bold uppercase tracking-[0.16em] text-gold-shimmer drop-shadow-[0_2px_12px_rgba(232,179,78,0.35)]">
+            COFFEELO
+          </span>
+          <span class="font-sans text-[8.5px] font-medium uppercase text-[#E8B34E]/85 tracking-[0.28em] flex items-center gap-1 -mt-0.5">
+            <span class="text-[6px] text-[#F5D77F]/90">✦</span>
+            <span>ATELIER & ROASTERY</span>
+            <span class="text-[6px] text-[#F5D77F]/90">✦</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden items-center gap-9 text-[15px] font-medium text-[#E3D3C6] md:flex">
+        <a href="#about" class="relative py-1 transition-colors hover:text-[#E8B34E] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#E8B34E] after:transition-all hover:after:w-full">About</a>
+        <a href="#products" class="relative py-1 transition-colors hover:text-[#E8B34E] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#E8B34E] after:transition-all hover:after:w-full">Collections</a>
+        <a href="#notes" class="relative py-1 transition-colors hover:text-[#E8B34E] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#E8B34E] after:transition-all hover:after:w-full">Notes</a>
+        <a href="#locations" class="relative py-1 transition-colors hover:text-[#E8B34E] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#E8B34E] after:transition-all hover:after:w-full">Locations</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden items-center gap-4 md:flex">
+        <a
+          href="#products"
+          class="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#C1552E] via-[#D48238] to-[#E8B34E] px-6 py-2.5 text-[14.5px] font-bold text-[#140A06] transition-all duration-300 hover:scale-105 shadow-[0_0_25px_rgba(232,179,78,0.3)] hover:shadow-[0_0_35px_rgba(232,179,78,0.5)]"
+        >
+          <span>Order Reserve</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="p-1.5 text-[#E8B34E] md:hidden focus:outline-none rounded-lg bg-[#E8B34E]/10 border border-[#E8B34E]/20"
+        onclick="toggleMobileMenu()"
+        aria-label="Toggle menu"
+      >
+        <svg id="menuIcon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="hidden border-t border-[#E8B34E]/20 bg-[#140A06]/95 backdrop-blur-2xl px-6 py-5 md:hidden">
+      <div class="flex flex-col gap-4 text-[16px] font-medium">
+        <a href="#about" onclick="toggleMobileMenu()" class="text-[#E3D3C6] hover:text-[#E8B34E] transition py-1 border-b border-[#E8B34E]/10">About</a>
+        <a href="#products" onclick="toggleMobileMenu()" class="text-[#E3D3C6] hover:text-[#E8B34E] transition py-1 border-b border-[#E8B34E]/10">Collections</a>
+        <a href="#notes" onclick="toggleMobileMenu()" class="text-[#E3D3C6] hover:text-[#E8B34E] transition py-1 border-b border-[#E8B34E]/10">Notes</a>
+        <a href="#locations" onclick="toggleMobileMenu()" class="text-[#E3D3C6] hover:text-[#E8B34E] transition py-1 border-b border-[#E8B34E]/10">Locations</a>
+        <a
+          href="#products"
+          onclick="toggleMobileMenu()"
+          class="mt-2 text-center rounded-full bg-gradient-to-r from-[#C1552E] to-[#E8B34E] px-6 py-3 font-bold text-[#140A06]"
+        >
+          Order Reserve
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- FULL-MODE HERO SECTION WITH BACKGROUND VIDEO -->
+    <section id="about" class="relative min-h-[92vh] w-full flex items-center overflow-hidden py-16 sm:py-20 lg:py-24 text-[#FFF9F0]">
+         <!-- Full-Mode 4K Luxury Hero Background -->
+      <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        <img
+          src="public/luxury-coffee-hero.jpg"
+          alt="Luxury Coffee Experience"
+          class="h-full w-full object-cover object-[52%_66%] filter brightness-[0.72] contrast-[1.12] scale-105"
+        />
+
+        <!-- Dark Brown & Gold Luxury Gradient Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#120804]/94 via-[#180C07]/78 to-[#120804]/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#120804] via-transparent to-[#120804]/70"></div>
+        
+        <!-- Glowing Golden Light Orbs -->
+        <div class="absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-[#E8B34E]/15 blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-10 h-96 w-96 rounded-full bg-[#C1552E]/20 blur-[140px] pointer-events-none"></div>
+        <div class="grain absolute inset-0 opacity-10"></div>
+      </div>
+
+      <!-- Hero Content Container -->
+      <div class="relative mx-auto max-w-7xl px-6 lg:px-10 w-full z-10">
+        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          
+          <div class="lg:col-span-8">
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E8B34E]/40 bg-[#E8B34E]/10 backdrop-blur-md px-4 py-1.5 text-[12.5px] font-semibold uppercase tracking-[0.22em] text-[#E8B34E] shadow-[0_0_20px_rgba(232,179,78,0.2)]">
+              <span class="h-2 w-2 rounded-full bg-[#E8B34E] animate-pulse"></span>
+              <span>Reserve Collection · Parbhani</span>
+            </div>
+
+            <h1 class="font-display text-5xl leading-[1.04] tracking-tight text-[#FFF9F0] sm:text-6xl lg:text-7xl xl:text-8xl font-bold">
+              An Elevated
+              <br />
+              <span class="italic font-normal tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#FFF5E1] via-[#E8B34E] to-[#F5D77F] drop-shadow-[0_4px_24px_rgba(232,179,78,0.35)]">
+                Coffee
+              </span>
+              <br />
+              Experience
+            </h1>
+
+            <p class="mt-6 max-w-2xl text-[17px] sm:text-[19px] leading-relaxed text-[#D6C2B4]">
+              Single-origin beans, roasted slowly in small artisanal batches with precision and care. 
+              Taste the deep notes of dark chocolate, toasted hazelnut, and golden caramel in every pour.
+            </p>
+
+            <!-- Buttons -->
+            <div class="mt-9 flex flex-wrap items-center gap-4 sm:gap-6">
+              <a
+                href="#products"
+                class="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-gradient-to-r from-[#C1552E] via-[#D48238] to-[#E8B34E] px-8 py-4 text-[16px] font-bold text-[#140A06] transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(232,179,78,0.35)] hover:shadow-[0_0_45px_rgba(232,179,78,0.55)]"
+              >
+                <span>Order Reserve Blend</span>
+                <svg class="h-4 w-4 transition group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+
+              <a
+                href="#collections"
+                class="inline-flex items-center gap-2 rounded-full border border-[#E8B34E]/30 bg-[#160B06]/60 backdrop-blur-md px-7 py-4 text-[15.5px] font-semibold text-[#FFF9F0] transition hover:border-[#E8B34E] hover:bg-[#E8B34E]/10"
+              >
+                <span>Explore 10 Roast Scenes ↓</span>
+              </a>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="mt-12 sm:mt-14 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-[#E8B34E]/20 pt-7 max-w-2xl">
+              <div class="rounded-2xl border border-[#E8B34E]/15 bg-[#140A06]/60 backdrop-blur-md p-4">
+                <div class="text-gold-gradient font-display text-2xl font-bold">100%</div>
+                <div class="mt-1 text-[13px] text-[#D6C2B4]">Single-Origin Beans</div>
+              </div>
+
+              <div class="rounded-2xl border border-[#E8B34E]/15 bg-[#140A06]/60 backdrop-blur-md p-4">
+                <div class="text-gold-gradient font-display text-2xl font-bold">1200m</div>
+                <div class="mt-1 text-[13px] text-[#D6C2B4]">High-Altitude Farm</div>
+              </div>
+
+              <div class="col-span-2 sm:col-span-1 rounded-2xl border border-[#E8B34E]/15 bg-[#140A06]/60 backdrop-blur-md p-4">
+                <div class="text-gold-gradient font-display text-2xl font-bold">Small-Batch</div>
+                <div class="mt-1 text-[13px] text-[#D6C2B4]">Artisanal Roasting</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Audio Capsule -->
+          <div class="lg:col-span-4 flex justify-end">
+            <div class="inline-flex items-center gap-3 rounded-full border border-[#E8B34E]/30 bg-[#23120A]/80 backdrop-blur-xl px-5 py-2.5 shadow-xl gold-glow">
+              <span class="h-2 w-2 rounded-full bg-[#E8B34E] animate-ping"></span>
+              <span class="text-xs font-bold uppercase tracking-wider text-[#E8B34E]">
+                Live Café Ambience
+              </span>
+              <div class="flex items-center gap-1.5 border-l border-[#E8B34E]/20 pl-2.5">
+                <button
+                  onclick="toggleVideoPlay()"
+                  id="playPauseBtn"
+                  class="flex h-7 w-7 items-center justify-center rounded-full bg-[#E8B34E]/15 text-[#E8B34E] hover:bg-[#E8B34E] hover:text-[#140A06] transition"
+                  title="Pause Ambience"
+                >
+                  ⏸
+                </button>
+                <button
+                  onclick="toggleVideoMute()"
+                  id="muteBtn"
+                  class="flex h-7 w-7 items-center justify-center rounded-full bg-[#E8B34E]/15 text-[#E8B34E] hover:bg-[#E8B34E] hover:text-[#140A06] transition"
+                  title="Mute Ambience"
+                >
+                  🔇
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Products / Menu Section -->
+    <section id="products" class="relative bg-[#180C07] px-6 py-20 sm:py-24 lg:px-10 border-t border-[#E8B34E]/15">
+      <div class="mx-auto max-w-7xl">
+        
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <div class="mb-3 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.22em] text-[#E8B34E]">
+              <span class="h-[6px] w-[6px] rounded-full bg-[#E8B34E]"></span>
+              The Reserve Menu
+            </div>
+            <h2 class="font-display text-4xl leading-tight sm:text-5xl text-[#FFF9F0]">
+              Coffee Crafted <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-[#FFF5E1] via-[#E8B34E] to-[#F5D77F]">With Mastery</span>
+            </h2>
+          </div>
+          <p class="max-w-md text-[15px] sm:text-[16.5px] leading-relaxed text-[#D6C2B4]">
+            Hand-crafted espresso extractions, eighteen-hour cold brews, decadent iced frappes, and single-origin special reserve brews.
+          </p>
+        </div>
+
+        <!-- Order Toast -->
+        <div id="orderToast" class="hidden mt-6 inline-flex items-center gap-2 rounded-full border border-[#E8B34E]/50 bg-gradient-to-r from-[#C1552E] via-[#D48238] to-[#E8B34E] px-6 py-3 font-bold text-[#140A06] shadow-[0_0_30px_rgba(232,179,78,0.4)] animate-bounce">
+          <span>✓</span>
+          <span id="orderToastText">Added to your reserve tray!</span>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div id="productCategoryTabs" class="mt-10 flex flex-wrap items-center gap-2.5 sm:gap-3.5 pb-2">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+        <!-- 3-Column Product Grid -->
+        <div id="productsGrid" class="mt-10 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="notes" class="relative overflow-hidden bg-[#140A06] px-6 py-20 sm:py-24 lg:px-10 border-t border-[#E8B34E]/10">
+      <div class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        
+        <div class="relative flex justify-center order-2 lg:order-1">
+          <div class="relative">
+            <div class="relative aspect-square w-72 sm:w-88 md:w-96 overflow-hidden rounded-full border-4 border-[#E8B34E]/60 shadow-[0_0_65px_rgba(232,179,78,0.32)] bg-[#23120A] group">
+              <img
+                src="public/luxury-coffee-hero.jpg"
+                alt="Coffeelo Craft"
+                class="h-full w-full object-cover object-[52%_66%] scale-105 transition duration-1000 group-hover:scale-110 filter brightness-[0.96] contrast-[1.06]"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#140A06]/50 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            
+            <div class="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-3 z-20 rounded-2xl bg-gradient-to-r from-[#C1552E] via-[#D48238] to-[#E8B34E] p-[1.5px] shadow-[0_12px_35px_rgba(0,0,0,0.7)] hover:scale-105 transition duration-300">
+              <div class="rounded-2xl bg-[#140A06]/95 backdrop-blur-xl px-5 py-3 text-center border border-[#E8B34E]/20 min-w-[150px]">
+                <div class="font-display text-2xl font-bold text-gold-gradient tracking-tight">1200m</div>
+                <div class="text-[11px] uppercase tracking-wider text-[#E8B34E] font-semibold">Altitude, Single Farm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <div class="mb-3 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.22em] text-[#E8B34E]">
+            <span class="h-[6px] w-[6px] rounded-full bg-[#E8B34E]"></span>
+            Our Story
+          </div>
+          <h2 class="font-display text-4xl leading-tight sm:text-5xl text-[#FFF9F0]">
+            From Bean to <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-[#FFF5E1] via-[#E8B34E] to-[#F5D77F]">Mastery</span>
+          </h2>
+          <p class="mt-5 sm:mt-6 max-w-lg text-[16px] sm:text-[17px] leading-relaxed text-[#D6C2B4]">
+            Coffeelo sources quality beans directly from growers we know by name, roasts them carefully in small batches, and gets every bag out the door while it's still close to the harvest.
+          </p>
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 sm:max-w-md">
+            <div class="rounded-2xl border border-[#E8B34E]/20 bg-[#23120A]/70 p-5 shadow-sm">
+              <div class="font-display text-xl font-semibold text-[#E8B34E]">Direct trade</div>
+              <div class="mt-1 text-sm text-[#D6C2B4]">Sourced grower to roaster</div>
+            </div>
+            <div class="rounded-2xl border border-[#E8B34E]/20 bg-[#23120A]/70 p-5 shadow-sm">
+              <div class="font-display text-xl font-semibold text-[#E8B34E]">Small batch</div>
+              <div class="mt-1 text-sm text-[#D6C2B4]">Roasted in short runs</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Find Your Perfect Roast / Collections & Live Ambience Studio -->
+    <section id="collections" class="relative bg-[#140A06] px-6 py-24 sm:py-28 lg:px-10 border-t border-[#E8B34E]/15 text-[#FFF9F0] overflow-hidden">
+      <div class="relative mx-auto max-w-7xl z-10">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div class="mb-3 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.22em] text-[#E8B34E]">
+              <span class="h-[6px] w-[6px] rounded-full bg-[#E8B34E]"></span>
+              Artisan Roastery & Profiler
+            </div>
+            <h2 class="font-display text-4xl leading-tight sm:text-5xl lg:text-6xl font-bold text-[#FFF9F0]">
+              Find Your <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#FFF5E1] via-[#E8B34E] to-[#F5D77F]">Perfect Roast</span>
+            </h2>
+          </div>
+          <p class="max-w-md text-[15px] sm:text-[16.5px] leading-relaxed text-[#D6C2B4]">
+            Every batch is roasted in small artisan runs to unlock the origin's exact sweetness, aromatics, and velvet finish.
+          </p>
+        </div>
+
+        <!-- Integrated Live Ambience & Roasting Scenes Studio -->
+        <div class="mt-12 rounded-[32px] border border-[#E8B34E]/30 bg-gradient-to-r from-[#23120A]/95 via-[#1A0C06]/92 to-[#120804]/98 backdrop-blur-2xl p-6 sm:p-7 shadow-[0_25px_60px_rgba(0,0,0,0.65)] gold-glow">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E8B34E]/15 border border-[#E8B34E]/30 text-[#E8B34E]">
+                🔥
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-[#E8B34E] animate-ping"></span>
+                  <span class="text-[11.5px] font-bold uppercase tracking-wider text-[#E8B34E]">
+                    Live Ambience Studio · <span id="activeSceneName">Master Pour</span>
+                  </span>
+                </div>
+                <div id="sceneTitle" class="font-display text-xl sm:text-2xl font-bold text-[#FFF9F0]">
+                  Parbhani Hand Pour-Over
+                </div>
+                <p id="sceneDesc" class="mt-1 text-[13.5px] text-[#D6C2B4] max-w-md">
+                  Slow concentric kettle pour blooming hand-selected single-origin grounds with delicate clarity.
+                </p>
+              </div>
+            </div>
+
+            <div id="sceneNotes" class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-[#E8B34E]/30 bg-[#E8B34E]/10 px-3.5 py-1.5 text-[12px] font-semibold text-[#E8B34E]">
+                🍫 Dark Cacao
+              </span>
+              <span class="rounded-full border border-[#E8B34E]/30 bg-[#E8B34E]/10 px-3.5 py-1.5 text-[12px] font-semibold text-[#E8B34E]">
+                🌰 Roasted Hazelnut
+              </span>
+              <span class="rounded-full border border-[#E8B34E]/30 bg-[#E8B34E]/10 px-3.5 py-1.5 text-[12px] font-semibold text-[#E8B34E]">
+                🍯 Wild Honey
+              </span>
+            </div>
+
+          </div>
+
+          <!-- 10-Scene Switcher -->
+          <div class="mt-6 border-t border-[#E8B34E]/15 pt-5">
+            <div class="mb-3 text-[11px] font-bold uppercase tracking-wider text-[#D6C2B4]/80 flex items-center justify-between">
+              <span>Switch Cinematic Experience (10 Scenes):</span>
+              <span class="text-[#E8B34E]">Active Ambience Background</span>
+            </div>
+            <div id="sceneButtonsGrid" class="flex items-center gap-2.5 overflow-x-auto pb-1 max-w-full custom-scrollbar select-none">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 3 3D Luxury Roast Profile Cards -->
+        <div class="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          
+          <!-- Card 1: Dark & Bold -->
+          <div class="flip-card relative h-[380px] cursor-pointer group">
+            <div class="flip-inner relative h-full w-full">
+              <div class="flip-front flex h-full flex-col justify-between rounded-[32px] bg-gradient-to-b from-[#23120A] via-[#1A0C06] to-[#120804] border border-[#E8B34E]/25 p-8 text-[#FFF9F0] shadow-2xl gold-glow group-hover:border-[#E8B34E]/60 transition-colors">
+                <div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-3xl">☕</span>
+                    <span class="rounded-full border border-[#E8B34E]/30 bg-[#E8B34E]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#E8B34E]">
+                      Signature Reserve
+                    </span>
+                  </div>
+                  <h3 class="mt-6 font-display text-3xl font-bold text-[#FFF9F0]">Dark & Bold</h3>
+                  <p class="mt-1 text-[13.5px] font-medium text-[#E8B34E]/90">Heavy Body · Roasted Cocoa</p>
+                  <p class="mt-3 text-[14px] leading-relaxed text-[#D6C2B4]">
+                    Small-batch second-crack roast developing intense dark chocolate, molasses, and toasted hazelnut.
+                  </p>
+                </div>
+                <div class="border-t border-[#E8B34E]/15 pt-4">
+                  <div class="flex items-center justify-between text-xs text-[#D6C2B4]">
+                    <span>🌡️ 225°C</span>
+                    <span><strong class="text-[#E8B34E]">Intensity:</strong> 5/5</span>
+                  </div>
+                  <div class="mt-3 text-xs font-semibold uppercase tracking-wider text-[#E8B34E]">
+                    Hover for Full Profile →
+                  </div>
+                </div>
+              </div>
+
+              <div class="flip-back flex h-full flex-col justify-between rounded-[32px] bg-gradient-to-br from-[#C1552E] via-[#9B3818] to-[#68220A] border-2 border-[#E8B34E]/40 p-8 text-[#FFF9F0] shadow-2xl">
+                <div>
+                  <div class="text-xs font-bold uppercase tracking-wider text-[#FFF5E1]/80">Roast Profile & Notes</div>
+                  <h3 class="mt-1 font-display text-2xl font-bold text-[#FFF9F0]">Dark & Bold</h3>
+                  <div class="mt-4">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-[#FFF5E1]">Key Flavor Notes:</div>
+                    <div class="mt-2 flex flex-wrap gap-1.5">
+                      <span class="rounded-full bg-[#140A06]/40 border border-[#FFF5E1]/20 px-3 py-1 text-xs font-semibold">✦ Dark Chocolate</span>
+                      <span class="rounded-full bg-[#140A06]/40 border border-[#FFF5E1]/20 px-3 py-1 text-xs font-semibold">✦ Molasses</span>
+                      <span class="rounded-full bg-[#140A06]/40 border border-[#FFF5E1]/20 px-3 py-1 text-xs font-semibold">✦ Hazelnut</span>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#FFF5E1]">Recommended Brew: Espresso & Moka Pot</div>
+                </div>
+                <a href="#products" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FFF9F0] py-3.5 text-[14px] font-bold text-[#140A06] transition hover:bg-[#E8B34E] shadow-lg">
+                  Order This Roast ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Artisan Medium -->
+          <div class="flip-card relative h-[380px] cursor-pointer group">
+            <div class="flip-inner relative h-full w-full">
+              <div class="flip-front flex h-full flex-col justify-between rounded-[32px] bg-gradient-to-b from-[#23120A] via-[#1A0C06] to-[#120804] border border-[#E8B34E]/25 p-8 text-[#FFF9F0] shadow-2xl gold-glow group-hover:border-[#E8B34E]/60 transition-colors">
+                <div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-3xl">🍯</span>
+                    <span class="rounded-full border border-[#E8B34E]/30 bg-[#E8B34E]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#E8B34E]">
+                      Master Pick
+                    </span>
+                  </div>
+                  <h3 class="mt-6 font-display text-3xl font-bold text-[#FFF9F0]">Artisan Medium</h3>
+                  <p class="mt-1 text-[13.5px] font-medium text-[#E8B34E]/90">Balanced Body · Honey Citrus</p>
+                  <p class="mt-3 text-[14px] leading-relaxed text-[#D6C2B4]">
+                    Roasted to peak first crack to balance sweetness, delicate floral aroma, and golden caramel finish.
+                  </p>
+                </div>
+                <div class="border-t border-[#E8B34E]/15 pt-4">
+                  <div class="flex items-center justify-between text-xs text-[#D6C2B4]">
+                    <span>🌡️ 210°C</span>
+                    <span><strong class="text-[#E8B34E]">Intensity:</strong> 3/5</span>
+                  </div>
+                  <div class="mt-3 text-xs font-semibold uppercase tracking-wider text-[#E8B34E]">
+                    Hover for Full Profile →
+                  </div>
+                </div>
+              </div>
+
+              <div class="flip-back flex h-full flex-col justify-between rounded-[32px] bg-gradient-to-br from-[#E8B34E] via-[#C1552E] to-[#8C3413] border-2 border-[#E8B34E]/40 p-8 text-[#FFF9F0] shadow-2xl">
+                <div>
+                  <div class="text-xs font-bold uppercase tracking-wider text-[#FFF5E1]/80">Roast Profile & Notes</div>
+                  <h3 class="mt-1 font-display text-2xl font-bold text-[#FFF9F0]">Artisan Medium</h3>
+                  <div class="mt-4">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-[#FFF5E1]">Key Flavor Notes:</div>
+                    <div class="mt-2 flex flex-wrap gap-1.5">
+                      <span class="rounded-full bg-[#140A06]/40 border border-[#FFF5E1]/20 px-3 py-1 text-xs font-semibold">✦ Wild Honey</span>
+                      <span class="rounded-full bg-[#140A06]/40 border border-[#FFF5E1]/20 px-3 py-1 text-xs font-semibold">✦ Blood Orange</span>
+                      <span class="rounded-full bg-[#140A06]/40 border border-[#FFF5E1]/20 px-3 py-1 text-xs font-semibold">✦ Caramel</span>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#FFF5E1]">Recommended Brew: Pour-Over & Aeropress</div>
+                </div>
+                <a href="#products" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FFF9F0] py-3.5 text-[14px] font-bold text-[#140A06] transition hover:bg-[#E8B34E] shadow-lg">
+                  Order This Roast ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Cold & Velvet -->
+          <div class="flip-card relative h-[380px] cursor-pointer group">
+            <div class="flip-inner relative h-full w-full">
+              <div class="flip-front flex h-full flex-col justify-between rounded-[32px] bg-gradient-to-b from-[#23120A] via-[#1A0C06] to-[#120804] border border-[#E8B34E]/25 p-8 text-[#FFF9F0] shadow-2xl gold-glow group-hover:border-[#E8B34E]/60 transition-colors">
+                <div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-3xl">🧊</span>
+                    <span class="rounded-full border border-[#E8B34E]/30 bg-[#E8B34E]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#E8B34E]">
+                      Artisan Cold Brew
+                    </span>
+                  </div>
+                  <h3 class="mt-6 font-display text-3xl font-bold text-[#FFF9F0]">Cold & Velvet</h3>
+                  <p class="mt-1 text-[13.5px] font-medium text-[#E8B34E]/90">Zero Acidity · Ultra Smooth</p>
+                  <p class="mt-3 text-[14px] leading-relaxed text-[#D6C2B4]">
+                    Eighteen-hour slow cold-water extraction delivering smooth natural cacao sweetness and crisp clarity.
+                  </p>
+                </div>
+                <div class="border-t border-[#E8B34E]/15 pt-4">
+                  <div class="flex items-center justify-between text-xs text-[#D6C2B4]">
+                    <span>🌡️ 18h Cold Steep</span>
+                    <span><strong class="text-[#E8B34E]">Intensity:</strong> 4/5</span>
+                  </div>
+                  <div class="mt-3 text-xs font-semibold uppercase tracking-wider text-[#E8B34E]">
+                    Hover for Full Profile →
+                  </div>
+                </div>
+              </div>
+
+              <div class="flip-back flex h-full flex-col justify-between rounded-[32px] bg-gradient-to-br from-[#8C3413] via-[#5C230B] to-[#2E1206] border-2 border-[#E8B34E]/40 p-8 text-[#FFF9F0] shadow-2xl">
+                <div>
+                  <div class="text-xs font-bold uppercase tracking-wider text-[#FFF5E1]/80">Roast Profile & Notes</div>
+                  <h3 class="mt-1 font-display text-2xl font-bold text-[#FFF9F0]">Cold & Velvet</h3>
+                  <div class="mt-4">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-[#FFF5E1]">Key Flavor Notes:</div>
+                    <div class="mt-2 flex flex-wrap gap-1.5">
+                      <span class="rounded-full bg-[#140A06]/40 border border-[#FFF5E1]/20 px-3 py-1 text-xs font-semibold">✦ Black Currant</span>
+                      <span class="rounded-full bg-[#140A06]/40 border border-[#FFF5E1]/20 px-3 py-1 text-xs font-semibold">✦ Cocoa Nib</span>
+                      <span class="rounded-full bg-[#140A06]/40 border border-[#FFF5E1]/20 px-3 py-1 text-xs font-semibold">✦ Vanilla</span>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#FFF5E1]">Recommended Brew: Over Ice & Cold Tonic</div>
+                </div>
+                <a href="#products" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FFF9F0] py-3.5 text-[14px] font-bold text-[#140A06] transition hover:bg-[#E8B34E] shadow-lg">
+                  Order This Roast ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Visit Us / Location -->
+    <section id="locations" class="bg-[#180C07] px-6 py-24 lg:px-10 border-t border-[#E8B34E]/15">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-3 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.22em] text-[#E8B34E]">
+          <span class="h-[6px] w-[6px] rounded-full bg-[#E8B34E]"></span>
+          Visit The Cafe
+        </div>
+        <h2 class="font-display text-4xl leading-tight sm:text-5xl text-[#FFF9F0]">
+          Come Have a Cup <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-[#FFF5E1] via-[#E8B34E] to-[#F5D77F]">With Us</span>
+        </h2>
+
+        <div class="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-5">
+          <div class="lg:col-span-2 rounded-[28px] border border-[#E8B34E]/25 bg-gradient-to-b from-[#23120A] to-[#140A06] p-8 shadow-xl">
+            <h3 class="font-display text-2xl text-[#FFF9F0]">Coffeelo, Parbhani</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-[#D6C2B4]">
+              Mantri Complex, Basmat Road<br />
+              Parbhani, Maharashtra 431401
+            </p>
+            <div class="mt-5 text-[15px] text-[#E8B34E]">
+              🕒 Open daily from 12:00 PM
+            </div>
+            <a
+              href="https://maps.google.com/?q=Mantri+Complex+Basmat+Road+Parbhani+431401"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#C1552E] to-[#E8B34E] px-6 py-3 text-[14px] font-bold text-[#140A06] transition hover:scale-105 shadow-md"
+            >
+              Get Directions ↗
+            </a>
+          </div>
+
+          <div class="relative overflow-hidden rounded-[28px] border border-[#E8B34E]/25 bg-[#140A06] lg:col-span-3 min-h-[320px] shadow-xl flex items-center justify-center">
+            <div class="text-center p-8">
+              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#E8B34E]/20 border border-[#E8B34E] shadow-[0_0_30px_rgba(232,179,78,0.3)]">
+                📍
+              </div>
+              <div class="mt-4 font-display text-xl text-[#FFF9F0]">Basmat Road, Parbhani</div>
+              <div class="mt-1 text-sm text-[#D6C2B4]">Maharashtra, India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0E0603] px-6 pb-10 pt-16 lg:px-10 border-t border-[#E8B34E]/15 text-[#D6C2B4]">
+    <div class="mx-auto max-w-7xl">
+      <div class="flex flex-col justify-between gap-10 border-b border-[#E8B34E]/15 pb-10 md:flex-row">
+        <div>
+          <a href="#" class="group inline-flex items-center gap-3 select-none transition-all duration-300">
+            <div class="relative flex h-10 w-10 items-center justify-center flex-shrink-0 transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 rounded-full bg-[#E8B34E]/25 blur-md opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative h-full w-full emblem-gold-glow">
+                <defs>
+                  <linearGradient id="ftrGoldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FFF4D0" />
+                    <stop offset="30%" stop-color="#E8B34E" />
+                    <stop offset="70%" stop-color="#C89B3C" />
+                    <stop offset="100%" stop-color="#F5D77F" />
+                  </linearGradient>
+                  <linearGradient id="ftrGoldCore" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2E1B12" />
+                    <stop offset="100%" stop-color="#140A06" />
+                  </linearGradient>
+                  <linearGradient id="ftrBean" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FFF0CA" />
+                    <stop offset="50%" stop-color="#E8B34E" />
+                    <stop offset="100%" stop-color="#C1552E" />
+                  </linearGradient>
+                  <linearGradient id="ftrSteam" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#E8B34E" stop-opacity="0.9" />
+                    <stop offset="100%" stop-color="#FFF9F0" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <circle cx="24" cy="24" r="22" stroke="url(#ftrGoldRim)" stroke-width="1.2" stroke-opacity="0.75" />
+                <circle cx="24" cy="24" r="20" stroke="url(#ftrGoldRim)" stroke-width="0.8" stroke-dasharray="1.5 2.5" />
+                <circle cx="24" cy="24" r="18.5" fill="url(#ftrGoldCore)" stroke="url(#ftrGoldRim)" stroke-width="1.5" />
+                <path d="M24 6.5 L24.8 8 L24 9.5 L23.2 8 Z" fill="#FFF4D0" />
+                <path d="M24 38.5 L24.8 40 L24 41.5 L23.2 40 Z" fill="#FFF4D0" />
+                <path d="M6.5 24 L8 24.8 L9.5 24 L8 23.2 Z" fill="#FFF4D0" />
+                <path d="M38.5 24 L40 24.8 L41.5 24 L40 23.2 Z" fill="#FFF4D0" />
+                <g transform="translate(24, 25) scale(0.72) translate(-24, -24)">
+                  <path d="M24 14 C17.5 14 14 18.5 14 24 C14 29.5 17.5 34 24 34 C24 34 21.5 28.5 24 24 C26.5 19.5 24 14 24 14 Z" fill="url(#ftrBean)" />
+                  <path d="M24 14 C30.5 14 34 18.5 34 24 C34 29.5 30.5 34 24 34 C24 34 26.5 28.5 24 24 C21.5 19.5 24 14 24 14 Z" fill="url(#ftrBean)" />
+                  <path d="M24 14 C21.5 19.5 26.5 28.5 24 34" stroke="#FFF9F0" stroke-width="1.2" stroke-linecap="round" />
+                </g>
+                <path d="M21 16.5 C20 14.5 22 13 21 11" stroke="url(#ftrSteam)" stroke-width="1.2" stroke-linecap="round" />
+                <path d="M27 16.5 C28 14.5 26 13 27 11" stroke="url(#ftrSteam)" stroke-width="1.2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-cinzel text-2xl font-bold uppercase tracking-[0.16em] text-gold-shimmer drop-shadow-[0_2px_12px_rgba(232,179,78,0.35)]">
+                COFFEELO
+              </span>
+              <span class="font-sans text-[8.5px] font-medium uppercase text-[#E8B34E]/85 tracking-[0.28em] flex items-center gap-1 -mt-0.5">
+                <span class="text-[6px] text-[#F5D77F]/90">✦</span>
+                <span>ATELIER & ROASTERY</span>
+                <span class="text-[6px] text-[#F5D77F]/90">✦</span>
+              </span>
+            </div>
+          </a>
+          <p class="mt-3 max-w-xs text-sm text-[#D6C2B4]">
+            An elevated luxury coffee experience, roasted in small batches in Parbhani.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-10">
+          <div>
+            <div class="mb-3 text-sm font-semibold uppercase tracking-wide text-[#E8B34E]">Shop</div>
+            <div class="flex flex-col gap-2 text-[15px]">
+              <a href="#about" class="hover:text-[#E8B34E]">About</a>
+              <a href="#products" class="hover:text-[#E8B34E]">Reserve Blends</a>
+            </div>
+          </div>
+          <div>
+            <div class="mb-3 text-sm font-semibold uppercase tracking-wide text-[#E8B34E]">Visit</div>
+            <div class="flex flex-col gap-2 text-[15px]">
+              <a href="#locations" class="hover:text-[#E8B34E]">Locations</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-between gap-3 pt-6 text-sm sm:flex-row">
+        <span>© <span id="currentYear"></span> Coffeelo. All rights reserved.</span>
+        <span>Parbhani, Maharashtra</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    function toggleMobileMenu() {
+      document.getElementById('mobileDrawer').classList.toggle('hidden');
+    }
+
+    const video = document.getElementById('heroBgVideo');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const muteBtn = document.getElementById('muteBtn');
+
+    function toggleVideoPlay() {
+      if (video.paused) {
+        video.play();
+        playPauseBtn.textContent = '⏸';
+      } else {
+        video.pause();
+        playPauseBtn.textContent = '▶';
+      }
+    }
+
+    function toggleVideoMute() {
+      video.muted = !video.muted;
+      muteBtn.textContent = video.muted ? '🔇' : '🔊';
+    }
+
+    const CINEMATIC_SCENES = [
+      {
+        id: "pour",
+        name: "Master Pour",
+        short: "☕ Pour",
+        video: "public/ai-video.mp4",
+        poster: "public/cinematic-coffee-hero.jpg",
+        title: "Parbhani Hand Pour-Over",
+        desc: "Slow concentric kettle pour blooming hand-selected single-origin grounds with delicate clarity.",
+        notes: ["🍫 Dark Cacao", "🌰 Toasted Hazelnut", "🍯 Wild Honey"]
+      },
+      {
+        id: "steam",
+        name: "Fresh Steam",
+        short: "✨ Steam",
+        video: "public/clip.mp4",
+        poster: "public/cozy-latte.jpg",
+        title: "Rising Morning Vapor",
+        desc: "Fresh hot extraction releasing peak aromatic floral oils and sweet caramelized sugars into the air.",
+        notes: ["🌸 Vanilla Bean", "🍂 Cinnamon Bark", "🍬 Toffee"]
+      },
+      {
+        id: "roast",
+        name: "Micro Roast",
+        short: "🌿 Roast",
+        video: "public/clip 2.mp4",
+        poster: "public/cafe-bg.jpg",
+        title: "Artisanal Drum Roast",
+        desc: "Small-batch first crack roast carefully monitored for optimal bean development and balanced acidity.",
+        notes: ["🪵 Smoky Oak", "🍫 Dark Molasses", "🌰 Almond"]
+      },
+      {
+        id: "espresso",
+        name: "Syrupy Espresso",
+        short: "⚡ Espresso",
+        video: "public/202910-919288798_medium.mp4",
+        poster: "public/espresso.jpg",
+        title: "Double Ristretto Shot",
+        desc: "Pulled slow under 9 bars of pressure for a velvety thick texture and explosive dark chocolate body.",
+        notes: ["🍫 Black Cocoa", "🍒 Dark Cherry", "🌰 Walnut"]
+      },
+      {
+        id: "coldbrew",
+        name: "18h Cold Brew",
+        short: "🧊 Cold Brew",
+        video: "public/3595-172488292_medium.mp4",
+        poster: "public/cold-brew.jpg",
+        title: "Slow Steeped Elixir",
+        desc: "Eighteen hours of cold water filtration extracting pure natural sweetness with zero bitter tannin.",
+        notes: ["🫐 Black Currant", "🍫 Cocoa Nib", "🍯 Maple"]
+      },
+      {
+        id: "latteart",
+        name: "Velvet Latte",
+        short: "🎨 Latte Art",
+        video: "public/clip.mp4",
+        poster: "public/single-origin.jpg",
+        title: "Micro-Foam Rosette",
+        desc: "Silky micro-textured steamed milk poured masterfully into a rich espresso crema canvas.",
+        notes: ["🥛 Sweet Cream", "🌰 Roasted Nut", "🍯 Brown Sugar"]
+      },
+      {
+        id: "grind",
+        name: "Burr Grinding",
+        short: "⚙️ Grinding",
+        video: "public/coffee.mp4",
+        poster: "public/espresso.jpg",
+        title: "Precision Particle Grind",
+        desc: "Uniform ceramic burr grinding preserving delicate bean volatile compounds right before extraction.",
+        notes: ["🌿 Fresh Roast", "🍫 Bitter Cocoa", "🌰 Nutmeg"]
+      },
+      {
+        id: "crema",
+        name: "Golden Crema",
+        short: "🍯 Crema",
+        video: "public/clip 2.mp4",
+        poster: "public/cozy-latte.jpg",
+        title: "Hazelnut Crema Crown",
+        desc: "Rich micro-bubble golden crema trapping aromatics and delivering an ultra-smooth first sip.",
+        notes: ["🍯 Golden Amber", "🍫 Toasted Sugar", "🧈 Butterscotch"]
+      },
+      {
+        id: "alchemy",
+        name: "Sunlit Pour",
+        short: "☀️ Sunlit",
+        video: "public/202910-919288798_medium.mp4",
+        poster: "public/cinematic-coffee-hero.jpg",
+        title: "Golden Hour Extraction",
+        desc: "Natural warm morning sunlight illuminating the rising aromatic steam across the wooden counter.",
+        notes: ["🍊 Blood Orange", "🌸 Jasmine", "🍯 Cane Sugar"]
+      },
+      {
+        id: "lounge",
+        name: "Night Lounge",
+        short: "🌙 Lounge",
+        video: "public/3595-172488292_medium.mp4",
+        poster: "public/cafe-bg.jpg",
+        title: "Midnight Cafe Ambience",
+        desc: "Mellow evening jazz and warm ambient lighting for slow conversations over artisanal brew.",
+        notes: ["🍫 Dark Truffle", "🌰 Spiced Pecan", "🍷 Red Wine"]
+      }
+    ];
+
+    let currentSceneIndex = 0;
+
+    function renderSceneButtons() {
+      const grid = document.getElementById('sceneButtonsGrid');
+      grid.innerHTML = '';
+      CINEMATIC_SCENES.forEach((scene, index) => {
+        const isActive = index === currentSceneIndex;
+        const btn = document.createElement('button');
+        btn.className = `flex items-center gap-1.5 whitespace-nowrap rounded-full py-2 px-3.5 text-[12px] font-semibold transition-all duration-200 border shrink-0 ${
+          isActive
+            ? "border-[#E8B34E] bg-gradient-to-r from-[#E8B34E]/30 to-[#C1552E]/30 text-[#FFF9F0] shadow-md scale-105"
+            : "border-[#E8B34E]/15 bg-[#140A06]/60 text-[#D6C2B4] hover:border-[#E8B34E]/40 hover:bg-[#E8B34E]/10"
+        }`;
+        btn.innerHTML = `
+          <span>${scene.short}</span>
+          ${isActive ? '<span class="h-1.5 w-1.5 rounded-full bg-[#E8B34E] animate-ping"></span>' : ''}
+        `;
+        btn.onclick = () => activateScene(index);
+        grid.appendChild(btn);
+      });
+    }
+
+    function activateScene(index) {
+      currentSceneIndex = index;
+      const scene = CINEMATIC_SCENES[index];
+      
+      video.src = scene.video;
+      video.poster = scene.poster;
+      video.load();
+      video.play().catch(() => {});
+      playPauseBtn.textContent = '⏸';
+
+      document.getElementById('activeSceneName').textContent = scene.name;
+      document.getElementById('sceneTitle').textContent = scene.title;
+      document.getElementById('sceneDesc').textContent = scene.desc;
+
+      const notesContainer = document.getElementById('sceneNotes');
+      notesContainer.innerHTML = scene.notes
+        .map(note => `<span class="rounded-full border border-[#E8B34E]/25 bg-[#E8B34E]/10 px-3 py-1 text-[11.5px] font-medium text-[#E8B34E]">${note}</span>`)
+        .join('');
+
+      renderSceneButtons();
+    }
+
+    // Initial render for Ambience Studio
+    renderSceneButtons();
+
+    // 19 Artisanal Menu Items across 4 Categories
+    const MENU_CATEGORIES = [
+      { id: "all", name: "All Offerings", icon: "✨" },
+      { id: "hot", name: "Hot Coffee", icon: "☕" },
+      { id: "cold", name: "Cold Coffee", icon: "🧊" },
+      { id: "frappe", name: "Frappe", icon: "🥤" },
+      { id: "special", name: "Special Coffee", icon: "🥥" }
+    ];
+
+    const PRODUCTS = [
+      // Hot Coffee
+      { id: "hot-cappuccino", name: "Hot Cappuccino", category: "hot", tag: "Classic & Velvety", desc: "Equal parts dense espresso, steamed whole milk, and luxurious micro-foam dust with organic cacao.", price: "₹220", img: "public/cappuccino-foam.jpg" },
+      { id: "hot-latte", name: "Hot Latte", category: "hot", tag: "Silky & Smooth", desc: "Smooth espresso poured into velvety steamed milk, finished with handcrafted swan latte art.", price: "₹230", img: "public/latte-swan.jpg" },
+      { id: "espresso", name: "Espresso Single/Double", category: "hot", tag: "Dense & Bold", desc: "A pure, syrupy double shot pulled under 9 bars of pressure with thick golden hazelnut crema.", price: "₹180", img: "public/espresso-crema.jpg" },
+      { id: "americano", name: "Americano", category: "hot", tag: "Clean & Pure", desc: "Double espresso shots extended over filtered hot water for deep origin clarity and floral notes.", price: "₹190", img: "public/hot-americano.jpg" },
+      { id: "mocha", name: "Mocha", category: "hot", tag: "Dark Belgian Choco", desc: "Espresso fused with melted Belgian dark chocolate ganache, steamed milk, and light cocoa dust.", price: "₹250", img: "public/hot-mocha.jpg" },
+      { id: "macchiato", name: "Macchiato", category: "hot", tag: "Espresso Marked", desc: "A bold double ristretto shot gently marked with a dollop of airy, sweet micro-foam.", price: "₹200", img: "public/espresso-crema.jpg" },
+
+      // Cold Coffee
+      { id: "cold-coffee", name: "Classic Cold Coffee", category: "cold", tag: "Chilled Perfection", desc: "Fresh brewed espresso shaken vigorously with chilled whole milk and caramelized raw cane sugar.", price: "₹220", img: "public/cold-brew.jpg" },
+      { id: "ice-cream-cold-coffee", name: "Cold Coffee with Ice Cream", category: "cold", tag: "Decadent Float", desc: "Thick velvety iced coffee topped with a luscious scoop of artisanal Madagascar vanilla bean ice cream.", price: "₹260", img: "public/coffee-float.jpg" },
+      { id: "mocha-cold-coffee", name: "Mocha Cold Coffee", category: "cold", tag: "Dark Cocoa Swirl", desc: "Chilled espresso shaken with rich melted chocolate ganache and whole milk over crushed ice.", price: "₹260", img: "public/hot-mocha.jpg" },
+      { id: "caramel-cold-coffee", name: "Caramel Cold Coffee", category: "cold", tag: "Golden Butterscotch", desc: "Cold brewed espresso swirled with artisanal golden salted caramel drizzle and cold cream.", price: "₹250", img: "public/caramel-coffee.jpg" },
+      { id: "vanilla-cold-coffee", name: "Vanilla Cold Coffee", category: "cold", tag: "Infused Aromatics", desc: "Smooth chilled espresso infused with natural bourbon vanilla bean and creamy cold milk.", price: "₹250", img: "public/coffee-float.jpg" },
+      { id: "iced-americano", name: "Iced Americano", category: "cold", tag: "Zero Calorie Clarity", desc: "Crisp double espresso shots poured over crystal-clear ice rocks and purified mountain water.", price: "₹200", img: "public/iced-americano.jpg" },
+      { id: "iced-latte", name: "Iced Latte", category: "cold", tag: "Layered Espresso", desc: "Creamy cold milk over ice topped with floating hot dark espresso creating a dual-layer sip.", price: "₹240", img: "public/caramel-coffee.jpg" },
+      { id: "iced-cappuccino", name: "Iced Cappuccino", category: "cold", tag: "Cold Foam Crown", desc: "Chilled espresso and milk crowned with an airy, cloud-like cold micro-foam layer.", price: "₹240", img: "public/coffee-float.jpg" },
+      { id: "cold-brew", name: "18h Reserve Cold Brew", category: "cold", tag: "Slow Steeped", desc: "Steeped for eighteen hours with pure cold water, delivering naturally sweet cacao notes with zero bitterness.", price: "₹260", img: "public/cold-brew.jpg" },
+
+      // Frappe
+      { id: "caramel-frappe", name: "Caramel Frappe", category: "frappe", tag: "Frosty & Sweet", desc: "Blended ice-crushed coffee with handcrafted golden caramel, crowned with whipped cream.", price: "₹280", img: "public/frappe.jpg" },
+      { id: "chocolate-frappe", name: "Chocolate Frappe", category: "frappe", tag: "Choco Chip Crunch", desc: "Frosty blended coffee with Belgian dark chocolate chips, cocoa glaze, and whipped peak.", price: "₹280", img: "public/frappe.jpg" },
+      { id: "strawberry-coffee-frappe", name: "Strawberry Coffee Frappe", category: "frappe", tag: "Berry Fusion", desc: "An artisanal fusion of tart strawberry puree, chilled espresso, and velvety blended milk.", price: "₹290", img: "public/strawberry-frappe.jpg" },
+
+      // Special Coffee
+      { id: "coconut-iced-coffee", name: "Coconut Iced Coffee", category: "special", tag: "Tropical Signature", desc: "Cold-pressed coastal coconut milk shaken with dark espresso and palm nectar over ice.", price: "₹280", img: "public/coconut-coffee.jpg" }
+    ];
+
+    let currentProductCategory = 'all';
+
+    function renderCategoryTabs() {
+      const tabsContainer = document.getElementById('productCategoryTabs');
+      tabsContainer.innerHTML = '';
+
+      MENU_CATEGORIES.forEach(cat => {
+        const isActive = currentProductCategory === cat.id;
+        const count = cat.id === 'all'
+          ? PRODUCTS.length
+          : PRODUCTS.filter(p => p.category === cat.id).length;
+
+        const btn = document.createElement('button');
+        btn.className = `flex items-center gap-2 rounded-full py-2.5 px-5 text-[13.5px] font-semibold transition-all duration-300 border ${
+          isActive
+            ? "border-[#E8B34E] bg-gradient-to-r from-[#E8B34E] via-[#D4AF37] to-[#C1552E] text-[#140A06] shadow-[0_0_25px_rgba(232,179,78,0.35)] scale-105"
+            : "border-[#E8B34E]/20 bg-[#23120A]/70 backdrop-blur-md text-[#D6C2B4] hover:border-[#E8B34E]/50 hover:bg-[#E8B34E]/10 hover:text-[#FFF9F0]"
+        }`;
+        btn.innerHTML = `
+          <span>${cat.icon}</span>
+          <span>${cat.name}</span>
+          <span class="rounded-full px-2 py-0.5 text-[11px] font-bold ${
+            isActive ? "bg-[#140A06]/25 text-[#140A06]" : "bg-[#140A06]/60 text-[#E8B34E]"
+          }">${count}</span>
+        `;
+        btn.onclick = () => {
+          currentProductCategory = cat.id;
+          renderCategoryTabs();
+          renderProducts();
+        };
+        tabsContainer.appendChild(btn);
+      });
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      grid.innerHTML = '';
+
+      const items = currentProductCategory === 'all'
+        ? PRODUCTS
+        : PRODUCTS.filter(p => p.category === currentProductCategory);
+
+      items.forEach(p => {
+        const card = document.createElement('div');
+        card.className = "group relative flex flex-col overflow-hidden rounded-[28px] bg-gradient-to-b from-[#23120A] to-[#140A06] border border-[#E8B34E]/20 shadow-xl hover:border-[#E8B34E]/60 hover:shadow-[0_20px_45px_rgba(232,179,78,0.18)] transition-all duration-300 hover:-translate-y-2";
+        card.innerHTML = `
+          <div class="relative aspect-[16/10] w-full overflow-hidden bg-[#140A06]">
+            <img src="${p.img}" alt="${p.name}" class="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-108 filter brightness-[0.95]" />
+            <div class="absolute top-4 left-4 rounded-full bg-[#140A06]/85 backdrop-blur-md border border-[#E8B34E]/30 px-3.5 py-1 text-[11.5px] font-semibold uppercase tracking-wider text-[#E8B34E] shadow-md">
+              ${p.tag}
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#140A06] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between p-6 sm:p-7">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-[#FFF9F0] group-hover:text-gold-gradient transition-colors">
+                ${p.name}
+              </h3>
+              <p class="mt-2.5 text-[14px] leading-relaxed text-[#D6C2B4] min-h-[44px]">
+                ${p.desc}
+              </p>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-[#E8B34E]/15 pt-4">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-[#D6C2B4]/70 block">Fresh Brew</span>
+                <span class="font-display text-2xl font-bold text-gold-gradient">${p.price}</span>
+              </div>
+              <button onclick="orderProduct('${p.name}')" class="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#C1552E] via-[#D48238] to-[#E8B34E] px-5 py-2.5 text-[13.5px] font-bold text-[#140A06] transition-all duration-300 hover:scale-105 shadow-md active:scale-95">
+                <span>Order Now</span>
+                <span class="font-bold">↗</span>
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function orderProduct(name) {
+      const toast = document.getElementById('orderToast');
+      const text = document.getElementById('orderToastText');
+      text.textContent = `Added "${name}" to your reserve tray!`;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+
+    // Initial render of products & categories
+    renderCategoryTabs();
+    renderProducts();
+  </script>
+</body>
+</html>
+

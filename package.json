@@ -1,0 +1,9 @@
+{
+  "name": "cafe-website-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix \"cafe website\" run dev",
+    "build": "npm --prefix \"cafe website\" run build",
+    "preview": "npm --prefix \"cafe website\" run preview"
+  }
+}
