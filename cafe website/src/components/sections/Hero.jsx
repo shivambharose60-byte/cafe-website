@@ -56,7 +56,7 @@ export default function Hero() {
             </h1>
 
             {/* Artisanal Story Subtitle */}
-            <p className="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg lg:text-xl font-normal leading-relaxed text-[#D6C2B4]">
+            <p className="mt-4 sm:mt-5 max-w-xl text-xs sm:text-sm lg:text-[15px] font-normal leading-relaxed text-[#D6C2B4]/90">
               Single-origin beans, roasted slowly in small artisanal batches with precision and care. 
               Taste the deep notes of dark chocolate, toasted hazelnut, and golden caramel in every pour.
             </p>
