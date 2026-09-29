@@ -2,7 +2,6 @@ import React from 'react';
 import {
   ArrowRight,
   Sparkles,
-  Coffee,
   ChevronDown,
 } from 'lucide-react';
 import { IMAGES } from '../../assets/images';
@@ -101,16 +100,8 @@ export default function Hero() {
 
           </div>
 
-          {/* RIGHT COLUMN: Clean space showing the background coffee cup, with a subtle luxury badge */}
-          <div className="lg:col-span-4 xl:col-span-5 flex lg:justify-end items-center">
-            <div className="inline-flex items-center gap-3 rounded-full border border-[#E8B34E]/30 bg-[#23120A]/70 backdrop-blur-xl px-5 py-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.5),0_0_20px_rgba(232,179,78,0.2)]">
-              <span className="h-2 w-2 rounded-full bg-[#E8B34E] animate-ping" />
-              <Coffee className="h-4 w-4 text-[#E8B34E]" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#E8B34E]">
-                Artisanal Roastery & Café
-              </span>
-            </div>
-          </div>
+          {/* RIGHT COLUMN: Clean open space showcasing the background coffee visual */}
+          <div className="hidden lg:block lg:col-span-4 xl:col-span-5" />
 
         </div>
       </div>
